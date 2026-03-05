@@ -1,91 +1,474 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade - Rastreou</title>
+    <title>Política de Privacidade - GR Tecnologia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #000000;
+            --color-secondary: #111111;
+            --color-white: #FFFFFF;
+            --color-accent: #C5A059;
+            --color-gray: #333333;
+            --color-light-gray: #F5F5F5;
+            --color-text-gray: #666666;
+            --color-border: #E0E0E0;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--color-light-gray);
+            color: var(--color-gray);
+            line-height: 1.8;
         }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            color: var(--color-white);
+            font-size: 48px;
+            font-weight: 900;
+            letter-spacing: 8px;
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            color: var(--color-accent);
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 4px;
+        }
+
+        /* Container */
         .container {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
         }
-        h1 { color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #444; margin-top: 30px; text-transform: uppercase; font-size: 1.2rem; }
-        h3 { color: #666; font-size: 1rem; border-left: 4px solid #0056b3; padding-left: 10px; margin-top: 25px; }
-        p { margin-bottom: 15px; text-align: justify; }
-        ul { background: #f0f4f8; padding: 20px 40px; border-radius: 5px; list-style-type: none; }
-        li { font-family: monospace; color: #d63384; margin-bottom: 5px; font-size: 0.9rem; }
-        .footer { margin-top: 50px; font-size: 0.8rem; color: #888; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
-        a { color: #0056b3; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+
+        /* Content Card */
+        .content-card {
+            background: var(--color-white);
+            border-radius: 12px;
+            padding: 60px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+
+        /* Last Updated */
+        .last-updated {
+            text-align: center;
+            color: var(--color-text-gray);
+            font-size: 14px;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--color-border);
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section h3 {
+            color: var(--color-primary);
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--color-accent);
+            text-transform: uppercase;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            font-size: 15px;
+            text-align: justify;
+        }
+
+        .section ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* Links */
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--color-primary);
+            text-decoration: underline;
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background: linear-gradient(135deg, var(--color-light-gray), #FAFAFA);
+            border-left: 4px solid var(--color-accent);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .contact-box p {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .contact-box strong {
+            color: var(--color-primary);
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: rgba(197, 160, 89, 0.1);
+            border: 2px solid var(--color-accent);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box p {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        /* Permissions List */
+        .permissions-list {
+            background: var(--color-light-gray);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .permissions-list code {
+            display: block;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: var(--color-gray);
+            padding: 5px 0;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--color-primary);
+            color: var(--color-white);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer p {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .footer a {
+            color: var(--color-accent);
+        }
+
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            background: var(--color-gray);
+            color: var(--color-white);
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: 30px;
+        }
+
+        .back-button:hover {
+            background: var(--color-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(197, 160, 89, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+                letter-spacing: 4px;
+            }
+
+            .header h2 {
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+
+            .content-card {
+                padding: 30px 20px;
+            }
+
+            .section h3 {
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Header -->
+    <div class="header">
+        <h1>RASTREOU</h1>
+        <h2>POLÍTICA DE PRIVACIDADE</h2>
+    </div>
+
+    <!-- Main Content -->
     <div class="container">
-        <h1>Rastreou</h1>
-        <h2>Políticas de Privacidade</h2>
-        
-        <p>Esta política de privacidade descreve como os aplicativos desenvolvidos pela <strong>Rastreou</strong> coletam, usam e protegem suas informações ao utilizar nossos serviços de rastreamento e monitoramento.</p>
+        <div class="content-card">
+            <div class="last-updated">
+                <p><strong>Última atualização:</strong> 03 de março de 2026</p>
+                <p style="margin-top: 10px;">Esta política aplica-se aos aplicativos <strong>Rastreou Lite</strong>, <strong>Rastreou Pro</strong> e demais aplicativos desenvolvidos por GR Tecnologia, proprietária dos aplicativos e da marca Rastreou, conta de desenvolvedor MacedoGR2017@gmail.com, disponíveis para <strong>iOS</strong> e <strong>Android</strong></p>
+            </div>
 
-        <h3>SEÇÃO 1 - O QUE FAREMOS COM ESTA INFORMAÇÃO?</h3>
-        <p>Quando você acessa nosso aplicativo, recebemos as informações de e-mail, empresa fornecedora da plataforma de rastreio, endereço de rede e sistema do seu dispositivo. Esses dados nos ajudam a aprender sobre o seu comportamento de navegação em nosso produto, melhorando sua experiência de uso.</p>
-        <p>Notificações por e-mail só serão encaminhadas se houver sua ciência formalizada por assinatura ou aceite de contrato com a prestadora de serviço de rastreio, desde que possua tal cláusula.</p>
+            <!-- Seção 1 -->
+            <div class="section">
+                <h3>Seção 1 - Coleta e Uso de Informações</h3>
+                <p>Quando você acessa os aplicativos <strong>Rastreou Lite</strong> ou <strong>Rastreou Pro</strong> em dispositivos iOS ou Android, coletamos informações essenciais para proporcionar a melhor experiência de rastreamento veicular:</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Informações coletadas:</strong></p>
+                    <ul>
+                        <li>Endereço de e-mail</li>
+                        <li>Empresa fornecedora da plataforma de rastreio</li>
+                        <li>Endereço de rede e sistema do seu dispositivo (iOS ou Android)</li>
+                        <li>Dados de comportamento de navegação no aplicativo</li>
+                        <li>Informações de localização (quando autorizado)</li>
+                        <li>Dados de uso e interação com funcionalidades</li>
+                    </ul>
+                </div>
 
-        <h3>SEÇÃO 2 - CONSENTIMENTO</h3>
-        <p><strong>Como vocês obtêm meu consentimento?</strong></p>
-        <p>Ao acessar os aplicativos da Rastreou e aceitar o contrato com o provedor de serviço de rastreio, entendemos que você está de acordo com a coleta de dados para os fins especificados.</p>
-        <p>Se pedirmos por suas informações pessoais por uma razão secundária, como marketing, vamos lhe pedir diretamente por seu consentimento ou lhe fornecer a oportunidade de dizer não.</p>
-        <p><strong>Retirada de consentimento:</strong></p>
-        <p>Você pode retirar o seu consentimento a qualquer momento, entrando em contato conosco em <a href="mailto:contato@rastreou.com.br">contato@rastreou.com.br</a> ou enviando uma correspondência para: <strong>Rastreou Ltda, Brasília, DF.</strong></p>
+                <p>Essas informações nos ajudam a compreender seu comportamento de navegação em nossos produtos, permitindo melhorias contínuas na sua experiência e personalização dos serviços oferecidos.</p>
+                
+                <p><strong>Notificações por e-mail:</strong> Serão enviadas apenas mediante sua ciência formalizada por assinatura ou aceite de contrato com a prestadora de serviço de rastreio, desde que tal cláusula esteja prevista contratualmente.</p>
+                
+                <p><strong>Diferenças entre versões:</strong> O Rastreou Pro pode coletar informações adicionais relacionadas a funcionalidades avançadas, sempre com seu consentimento explícito.</p>
+            </div>
 
-        <h3>SEÇÃO 3 - DIVULGAÇÃO</h3>
-        <p>Podemos divulgar suas informações pessoais caso sejamos obrigados pela lei para fazê-lo ou se você violar nosso contrato de serviço.</p>
+            <!-- Seção 2 -->
+            <div class="section">
+                <h3>Seção 2 - Consentimento</h3>
+                
+                <p><strong>Como obtemos seu consentimento?</strong></p>
+                <p>Ao baixar, instalar e acessar os aplicativos Rastreou Lite ou Rastreou Pro (disponíveis na App Store e Google Play) e aceitar o contrato com o provedor de serviço de rastreio, entendemos que você está de acordo com a coleta de dados para utilização pela nossa empresa.</p>
+                
+                <p>Durante a instalação e primeiro acesso, você será solicitado a autorizar permissões específicas do sistema operacional (iOS ou Android). Você pode gerenciar essas permissões a qualquer momento nas configurações do seu dispositivo.</p>
+                
+                <p>Caso solicitemos suas informações pessoais por razão secundária, como marketing, pesquisas ou desenvolvimento de novos recursos, pediremos diretamente seu consentimento ou forneceremos a oportunidade de recusar.</p>
+                
+                <p><strong>Como retirar seu consentimento?</strong></p>
+                <p>Se após nos fornecer seus dados você mudar de ideia, pode retirar seu consentimento para contato, coleta contínua de dados, uso ou divulgação de suas informações a qualquer momento.</p>
+                
+                <div class="contact-box">
+                    <p><strong>Entre em contato conosco:</strong></p>
+                    <p>📧 E-mail: <a href="mailto:contato@rastreou.com.br">contato@rastreou.com.br</a></p>
+                    <p>📍 Endereço: Rastreou Ltda - Brasília, DF</p>
+                    <p>📱 Você também pode gerenciar permissões diretamente nas configurações do aplicativo ou do seu dispositivo</p>
+                </div>
+            </div>
 
-        <h3>SEÇÃO 4 - SERVIÇOS DE TERCEIROS</h3>
-        <p>No geral, os fornecedores terceirizados usados por nós irão apenas coletar, usar e divulgar suas informações na medida do necessário para permitir que eles realizem os serviços que nos fornecem.</p>
-        <p>Lembre-se que certos fornecedores (como Google Maps ou provedores de nuvem) podem estar localizados em jurisdições diferentes. Ao sair do nosso aplicativo através de links externos, você não estará mais coberto por esta política.</p>
+            <!-- Seção 3 -->
+            <div class="section">
+                <h3>Seção 3 - Divulgação de Informações</h3>
+                <p>Podemos divulgar suas informações pessoais nas seguintes circunstâncias:</p>
+                <ul>
+                    <li>Quando obrigados por lei</li>
+                    <li>Em caso de violação do nosso contrato de serviço</li>
+                    <li>Para proteção de direitos, propriedade ou segurança da Rastreou, nossos usuários ou terceiros</li>
+                </ul>
+            </div>
 
-        <h3>SEÇÃO 5 - SEGURANÇA</h3>
-        <p>Para proteger suas informações pessoais, seguimos as melhores práticas da indústria. Todas as informações são criptografadas usando tecnologia <strong>Secure Socket Layer (SSL)</strong> e armazenadas com criptografia <strong>AES-256</strong>.</p>
+            <!-- Seção 4 -->
+            <div class="section">
+                <h3>Seção 4 - Serviços de Terceiros</h3>
+                <p>Os fornecedores terceirizados utilizados pela Rastreou coletam, usam e divulgam suas informações apenas na medida necessária para realizar os serviços que nos fornecem.</p>
+                
+                <p><strong>Importante:</strong> Certos fornecedores de serviços terceirizados, como provedores de nuvem e distribuidores digitais de aplicativos, possuem suas próprias políticas de privacidade. Recomendamos que você leia essas políticas para entender como suas informações serão tratadas.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Jurisdição Internacional:</strong></p>
+                    <p>Alguns fornecedores podem estar localizados em jurisdições diferentes. Por exemplo, se você está no Brasil e seu sistema operacional é mantido por empresa nos Estados Unidos, suas informações podem estar sujeitas à legislação americana, incluindo o Ato Patriota.</p>
+                </div>
+                
+                <p><strong>Links Externos:</strong> Quando você clica em links em nossa plataforma, pode ser direcionado para fora do nosso site. Não somos responsáveis pelas práticas de privacidade de outros sites. Por exemplo, a visualização do dispositivo em 360º redireciona para o Google Maps.</p>
+            </div>
 
-        <h3>SEÇÃO 6 - ALTERAÇÕES PARA ESSA POLÍTICA</h3>
-        <p>Reservamos o direito de modificar essa política a qualquer momento. Alterações e esclarecimentos vão surtir efeito imediatamente após sua publicação. Recomendamos a revisão frequente deste documento.</p>
+            <!-- Seção 5 -->
+            <div class="section">
+                <h3>Seção 5 - Segurança</h3>
+                <p>Para proteger suas informações pessoais, tomamos medidas de precaução rigorosas e seguimos as melhores práticas da indústria para garantir que não sejam perdidas, usurpadas, acessadas, divulgadas, alteradas ou destruídas inadequadamente.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Medidas de Segurança Implementadas:</strong></p>
+                    <ul>
+                        <li>Criptografia SSL (Secure Socket Layer) para transmissão de dados</li>
+                        <li>Armazenamento com criptografia AES-256</li>
+                        <li>Conformidade com requisitos PCI-DSS</li>
+                        <li>Padrões adicionais aceitos pela indústria</li>
+                    </ul>
+                </div>
+                
+                <p><em>Observação: Embora nenhum método de transmissão pela Internet ou armazenamento eletrônico seja 100% seguro, implementamos todos os padrões de segurança reconhecidos.</em></p>
+            </div>
 
-        <h3>SEÇÃO 7 - PERMISSÕES NECESSÁRIAS AO APLICATIVO</h3>
-        <p>Para o perfeito funcionamento das funcionalidades de monitoramento, o aplicativo requer as seguintes permissões:</p>
-        <ul>
-            <li>android.permission.INTERNET</li>
-            <li>android.permission.ACCESS_NETWORK_STATE</li>
-            <li>android.permission.POST_NOTIFICATIONS</li>
-            <li>android.permission.ACCESS_FINE_LOCATION</li>
-            <li>android.permission.ACCESS_BACKGROUND_LOCATION</li>
-            <li>android.permission.ACCESS_COARSE_LOCATION</li>
-            <li>android.permission.FOREGROUND_SERVICE</li>
-            <li>android.permission.FOREGROUND_SERVICE_LOCATION</li>
-            <li>android.permission.FOREGROUND_SERVICE_DATA_SYNC</li>
-            <li>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</li>
-            <li>android.permission.RECEIVE_BOOT_COMPLETED</li>
-            <li>android.permission.VIBRATE</li>
-            <li>android.permission.WAKE_LOCK</li>
-            <li>android.permission.WRITE_EXTERNAL_STORAGE</li>
-        </ul>
-        <p><em>* As permissões de localização são essenciais para a montagem de rotas e geofencing. As permissões de Foreground e Boot garantem o recebimento de alertas em tempo real.</em></p>
+            <!-- Seção 6 -->
+            <div class="section">
+                <h3>Seção 6 - Alterações na Política</h3>
+                <p>Reservamos o direito de modificar esta política de privacidade a qualquer momento. Por favor, revise-a com frequência.</p>
+                
+                <p><strong>Notificações:</strong> Alterações e esclarecimentos entram em vigor imediatamente após publicação. Se fizermos alterações materiais, notificaremos você para que tenha ciência sobre quais informações coletamos, como as usamos e sob quais circunstâncias as divulgamos.</p>
+                
+                <p><strong>Transferência de Propriedade:</strong> Se nossa empresa for adquirida ou fundida com outra, suas informações podem ser transferidas aos novos proprietários para continuidade dos serviços.</p>
+            </div>
 
-        <div class="footer">
-            <p>Última atualização: 03 de Março de 2026</p>
-            <p>&copy; Rastreou Ltda - Todos os direitos reservados.</p>
+            <!-- Seção 7 -->
+            <div class="section">
+                <h3>Seção 7 - Permissões dos Aplicativos</h3>
+                <p>Para o perfeito funcionamento dos aplicativos <strong>Rastreou Lite</strong> e <strong>Rastreou Pro</strong> em dispositivos <strong>Android</strong> e <strong>iOS</strong>, solicitamos as seguintes permissões:</p>
+                
+                <div class="highlight-box">
+                    <p><strong>📱 Permissões Android</strong></p>
+                </div>
+
+                <div class="permissions-list">
+                    <p><strong>Permissões de Localização:</strong></p>
+                    <code>android.permission.ACCESS_FINE_LOCATION</code>
+                    <code>android.permission.ACCESS_COARSE_LOCATION</code>
+                    <code>android.permission.ACCESS_BACKGROUND_LOCATION</code>
+                    <p style="margin-top: 10px; font-size: 13px; color: var(--color-text-gray);">Necessárias para montar rotas até o dispositivo rastreado e exibir localização em tempo real</p>
+                </div>
+
+                <div class="permissions-list">
+                    <p><strong>Permissões de Notificação:</strong></p>
+                    <code>android.permission.POST_NOTIFICATIONS</code>
+                    <code>android.permission.FOREGROUND_SERVICE</code>
+                    <code>android.permission.RECEIVE_BOOT_COMPLETED</code>
+                    <code>android.permission.WAKE_LOCK</code>
+                    <code>android.permission.VIBRATE</code>
+                    <p style="margin-top: 10px; font-size: 13px; color: var(--color-text-gray);">Para notificações em segundo plano, alertas de eventos e inicialização automática</p>
+                </div>
+
+                <div class="permissions-list">
+                    <p><strong>Permissões de Rede e Sistema:</strong></p>
+                    <code>android.permission.INTERNET</code>
+                    <code>android.permission.ACCESS_NETWORK_STATE</code>
+                    <code>android.permission.ACCESS_NOTIFICATION_POLICY</code>
+                    <code>com.google.android.providers.gsf.permission.READ_GSERVICES</code>
+                    <p style="margin-top: 10px; font-size: 13px; color: var(--color-text-gray);">Para comunicação com servidores e integração com Google Services</p>
+                </div>
+
+                <div class="permissions-list">
+                    <p><strong>Permissões de Serviços em Primeiro Plano:</strong></p>
+                    <code>android.permission.FOREGROUND_SERVICE_LOCATION</code>
+                    <code>android.permission.FOREGROUND_SERVICE_DATA_SYNC</code>
+                    <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>
+                    <p style="margin-top: 10px; font-size: 13px; color: var(--color-text-gray);">Para rastreamento contínuo, sincronização de dados e reprodução de som ao ligar/desligar bloqueio e geocerca</p>
+                </div>
+
+                <div class="permissions-list">
+                    <p><strong>Outras Permissões Android:</strong></p>
+                    <code>android.permission.WRITE_EXTERNAL_STORAGE</code>
+                    <code>com.android.launcher.permission.INSTALL_SHORTCUT</code>
+                    <p style="margin-top: 10px; font-size: 13px; color: var(--color-text-gray);">Para armazenamento de dados e criação de atalhos</p>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 30px;">
+                    <p><strong>🍎 Permissões iOS</strong></p>
+                </div>
+
+                <div class="permissions-list">
+                    <p><strong>Localização (Location Services):</strong></p>
+                    <code>NSLocationWhenInUseUsageDescription</code>
+                    <code>NSLocationAlwaysAndWhenInUseUsageDescription</code>
+                    <code>NSLocationAlwaysUsageDescription</code>
+                    <p style="margin-top: 10px; font-size: 13px; color: var(--color-text-gray);">Acesso à localização durante uso do app e em segundo plano para rastreamento contínuo</p>
+                </div>
+
+                <div class="permissions-list">
+                    <p><strong>Notificações (Push Notifications):</strong></p>
+                    <code>User Notifications Framework</code>
+                    <p style="margin-top: 10px; font-size: 13px; color: var(--color-text-gray);">Para envio de alertas, notificações de eventos e atualizações de status</p>
+                </div>
+
+                <div class="permissions-list">
+                    <p><strong>Atualização em Segundo Plano (Background Modes):</strong></p>
+                    <code>Location updates</code>
+                    <code>Background fetch</code>
+                    <code>Remote notifications</code>
+                    <p style="margin-top: 10px; font-size: 13px; color: var(--color-text-gray);">Para manter dados atualizados mesmo quando o app não está em uso ativo</p>
+                </div>
+
+                <div class="permissions-list">
+                    <p><strong>Outras Permissões iOS:</strong></p>
+                    <code>NSPhotoLibraryUsageDescription (opcional)</code>
+                    <code>NSCameraUsageDescription (opcional)</code>
+                    <p style="margin-top: 10px; font-size: 13px; color: var(--color-text-gray);">Para recursos de captura e anexo de imagens (quando disponível)</p>
+                </div>
+
+                <p style="margin-top: 30px;"><strong>Gerenciamento de Permissões:</strong></p>
+                <ul style="margin-top: 15px; padding-left: 30px;">
+                    <li>Você pode gerenciar todas as permissões a qualquer momento nas configurações do seu dispositivo</li>
+                    <li><strong>Android:</strong> Configurações > Aplicativos > Rastreou Lite/Pro > Permissões</li>
+                    <li><strong>iOS:</strong> Ajustes > Rastreou Lite/Pro > Permissões</li>
+                    <li>Algumas funcionalidades podem ficar limitadas se permissões essenciais forem negadas</li>
+                    <li>O Rastreou Pro pode solicitar permissões adicionais para recursos avançados</li>
+                </ul>
+
+                <p style="margin-top: 20px;"><em>Nota: Algumas permissões são interdependentes e necessárias para o funcionamento completo dos aplicativos. Todas as permissões são solicitadas de acordo com as diretrizes da Google Play Store e Apple App Store.</em></p>
+            </div>
+
+            <!-- Botão Voltar -->
+            <div style="text-align: center;">
+                <a href="https://rastreou.com.br/" class="back-button">Voltar ao Site</a>
+            </div>
         </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2026 Rastreou Ltda. Todos os direitos reservados.</p>
+        <p style="margin-top: 10px;">
+            Aplicativos disponíveis: <strong>Rastreou Lite</strong> e <strong>Rastreou Pro</strong> para iOS e Android
+        </p>
+        <p style="margin-top: 10px;">
+            <a href="mailto:contato@rastreou.com.br">contato@rastreou.com.br</a>
+        </p>
     </div>
 </body>
 </html>
